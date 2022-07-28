@@ -1,0 +1,511 @@
+    .intro_section {
+      width: 100vw;
+      margin-top: 100px;
+      h2{
+        line-height: 2em;
+      }
+    }
+
+    .circle {
+      width: 50px;
+      height: 50px;
+      background-color: #031254;
+      mix-blend-mode: difference;
+      isolation: isolate;
+      z-index: 9999;
+      border-radius: 50%;
+      transition: all .5s;
+    }
+
+    .circle:hover {
+      transform: scale(2.5)
+    }
+
+   
+
+    .wrap_word {
+      color: transparent;
+      font-weight: 400;
+      font-size: 100px;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-stroke: 2px #fff;
+      overflow: hidden;
+      line-height: 120px;
+      .wrap-slogan {
+        font-weight: 400;
+        font-size: 100px;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-stroke: 2px #fff;
+        overflow: hidden;
+        line-height: 120px;
+        font-family: "Bodoni Moda";
+        display: block;
+        color:#ffe1fe96;
+        transform: translate3d(0, -100%, 0);
+        @include mobile{
+          font-size:60px;
+        }
+      }
+    }
+
+
+@font-face {
+  font-family: "Bogart-Semibold";
+  src: url("./fonts/bogart-semibold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+ 
+
+.textpanel{
+		// height: 30vh;
+    text-align: center;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center; 
+    h2{
+      font-size: 80px;
+      position: relative;
+      color: transparent;
+      // transform: translateY(calc(100px - (var(--progress) * 200px)));
+      @include 	phone{
+        font-size: 70px;
+        margin: 90px 0 50px;
+      }
+      span.word {
+        font-family: "Bodoni Moda";
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        color: transparent;
+        padding: 20px 0;
+        margin: -20px 0;
+        &:before {
+          content: attr(data-word);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: transparent;
+          -webkit-background-clip: text;
+          -webkit-box-decoration-break: clone;
+          -webkit-text-fill-color: transparent;
+          -webkit-text-stroke: 1px #cbbcbc;  
+          background-image: linear-gradient(to bottom, #cbbcbc 50%, transparent 50%);
+          background-size: 100% 200%;
+          background-repeat: no-repeat;
+
+          // background-position: 50% calc(100px - (var(--progress) * 100px));
+          background-position: 100% calc(160px - var(--progress) * 160px);
+
+          transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          transition-delay: 1.25s;
+      }
+    }
+  }
+}
+ 
+
+
+// locomoscroll horizon but other keep width:100% then display no overflow-x
+#sectionPin {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  left: 0;
+  background: var(--text-color);
+  color: var(--bg-color);
+  @include phone{
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    
+  }
+}
+
+.pin-wrap {
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 10vw;
+  @include phone{
+    height: auto;
+    padding: 0;    
+    flex-direction: column;
+  }
+
+	.flex_alink3{
+		width:60vw;
+		margin: 0 100px;
+    background:$stroke-color;
+    display: flex;
+    flex-direction: column;
+    &:first-child{
+        background-color: transparent;
+        width:60vw;
+        @include phone{
+          width:80%;
+        }
+      p{
+        color:darkgray;
+      }
+    }
+    @include cusphone{
+      width: 70vw;
+    }
+		@include phone{
+      margin: 10px 0 ;
+			width: 80vw;
+		}
+		p{
+			font-size:20px ;
+			color: rgb(235, 109, 109);
+			margin-top: 60px;
+      line-height: 1.6;
+      @include phone{
+        margin-top: 0px;
+      }
+		}
+
+		.flex_list_card {
+			position: relative;
+			height: 50vh;
+			margin: 50px;
+			@include phone{
+				margin:0;
+        height: auto;
+			}
+			>img {
+        display: block;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				border-radius: 3px;
+				transform-origin: center;
+				transform: scale(0.9);
+				filter: grayscale(100%) sepia(20%) brightness(80%);
+        transition: transform 1s ease 1s ,filter 2s  cubic-bezier(0.445, 0.05, 0.55, 0.95) 2s   ;
+				&.active{	
+					transform: scale(1);
+					filter: none;   
+				}
+        @include phone{
+          transform: scale(1);
+          filter: none;
+        }
+				// transform: scale(calc(var(--progress) * 1));
+			}
+			.unsplash_info{
+				position: absolute;
+				top:10%;
+				left:0;
+				color:#fff;
+				opacity: 0;
+				transition: .5s;
+				a{
+					display: inline-block;
+					font-family: cursive;
+					color: #ae7e7e;
+          font-size: 24px;
+				}
+			}
+
+			&:hover .unsplash_info{
+					opacity: 1;
+          letter-spacing: 2px;
+			}
+		}
+
+		.flex_list_descript {
+				width: 60vw;
+				color: $primary-color;
+        flex-grow: 1;
+        padding: 0 20px 10px;
+				& >h2{
+          color: transparent;
+					font-family: Bodoni Moda;
+					font-weight: 400;
+					font-size: 80px;
+					-webkit-font-smoothing: antialiased;
+          -webkit-text-stroke: 1.5px #fff;
+          opacity: 0;
+          transform: translateY(100px);
+          transition: transform .9s cubic-bezier(0,.55,.45,1) .1s,opacity .3s cubic-bezier(0,.55,.45,1) .1s;
+          @include phone{        
+              font-size: 70px;
+              opacity: 1;
+              pointer-events: none;
+              transform: translateY(0px);
+              line-height: 60px;
+              color: #ffffff1c;
+              transform: translate3d(-10px, -30px, 10px);
+              -webkit-text-stroke: 1px #fff;
+          }
+					&.active {
+              opacity: 1;
+              transform: translateY(-30px);
+					}
+				}
+      @include cusphone{
+        width:70vw; 
+      }  
+      @include phone{
+        width:100%; 
+      }
+		}
+	}
+
+
+}
+// 
+section:not(#sectionpin) {
+  width: 100%;
+}
+
+
+.cursortype{
+  z-index: 9999;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  isolation: isolate;
+  transition: transform 350ms;
+  visibility: hidden;
+  &.cursorFront {
+    width: 28px;
+    height: 28px;
+    top: -8px;     //座標調節（カーソル位置と円の中心を合わせる）
+    left: -8px; 
+    background-color: #ffd7c5;
+    mix-blend-mode: hard-light;
+  }
+
+  &.cursorBack {
+    width: 32px;
+    height: 32px;
+    top: 0;
+    left: 0;
+    background-color: #facdd4;
+    mix-blend-mode:screen; 
+  }
+
+  &.cursorFront.hov{
+    width:150px;
+    height:150px;
+    background-color:pink;
+  }
+}
+
+
+
+// grid
+.newimgs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 200px);
+	grid-gap: 20px;
+  font-family: "Lato";
+  text-align: center;
+  padding: 2rem 8rem;
+	@include pad{
+		padding: 1rem;
+	}
+	@include phone{
+		grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 150px);
+    padding: 1rem;
+    justify-content: center;
+	}
+}
+
+@media screen and (max-width: 768px) {
+  .get_more {
+    width: 50vw;
+  }
+}
+
+
+// define figure grid&img 
+figure.grid_list {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+		&:nth-child(1) {
+			grid-row-start: span 2;
+			grid-column-start: span 2;
+		}
+    a{
+      width: 100%;
+			height: 100%;
+    }
+    img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: all 300ms linear;
+		}
+		&:hover img{
+			transform-origin: left top;
+			transform: scale(1.1);
+		}
+		figcaption{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 80%;
+			height: 0px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			color: #fff;
+			transform: translate(-50%, -50%);
+			transition: all 0.5s;
+			transition-delay: 0.3s;
+      h2,p{
+				color: white;
+				opacity: 0;
+				transition: opacity 0.35s;
+        
+			}
+		}
+		&:hover figcaption,&:active figcaption {
+				height: 80%;
+				border-top: 1px solid #fff;
+				border-bottom: 1px solid #fff;
+				background: #3c3b3b30;
+				cursor: pointer;
+				p{
+					opacity: 1;
+					transition-delay: 0.6s;
+					font-size: 1.2rem;
+					padding: 10px;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					overflow: hidden;
+					max-width: 100%;
+				}
+				
+		}
+}
+
+
+
+
+
+/* page2 section  --  newarrivals */
+.intro_header {
+  // height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro_header span {
+  background-color: black;
+  left: 50%;
+  height: 130px;
+  /* height: calc(100% + 18px); */
+  width: 1px;
+  display: block;
+  transition: all 0.5s;
+}
+
+.intro_header h2.title1,
+.title-wrap h2.title1 {
+  // margin-top: auto;
+  // margin-bottom: 30px;
+    position: relative;
+	margin:30px;
+}
+
+.get_more {
+  position: relative;
+  width: 30vw;
+  margin: 20px auto;
+  color: #fff;
+  text-align: center;
+  padding: 20px 40px;
+  display: block;
+  font-size: 1.5rem;
+  transition: all 2s ease-in;
+}
+
+.get_more::after {
+  content: "read more";
+  padding: 20px 40px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to left,
+    rgb(245 ,193 ,220) 0%,
+    rgba(239, 1, 124, 1) 100%
+  );
+  transition: all 0.2s ease-in;
+}
+
+.get_more:hover {
+  background: linear-gradient(
+    to right,
+    rgb(245 ,193, 220) 0%,
+    rgba(239, 1, 124, 1) 100%
+  );
+}
+
+.get_more:hover::after {
+  opacity: 0;
+  /* background:linear-gradient(to left, #dfcccf 0%, #ff7eb3 50%, #f5c9d0 100%); */
+}
+
+  
+
+.info {
+  position: absolute;
+  top: 100px;
+  padding: 25px;
+  background-color: black;
+  display: block;
+  color: white;
+}
+
+
+
+/* section-stores */
+.flex-layout {
+	height: 220px;
+  @include desk{
+		height: auto;
+	}
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2vw 5vw;
+  justify-content: space-evenly;
+  width:100%;
+
+	>.flex_item {
+		height: 50vh;
+		min-width: 50vw;
+		box-shadow: 0px 6px 24px #635d5d33;
+		transition: width cubic-bezier(0.2, 0.54, 0.4, 0.82) 800ms;
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.flex-layout > .flex_item {
+			height: 70vh;
+			min-width: 100vw;
+	}
+}
+
+
+
+  
+

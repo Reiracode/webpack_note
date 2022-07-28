@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content='developer' name='reiracode' />
+    <meta name="description" content="F2E Desinger in Taiwan">
+    <title>Rehome</title>
+</head>
+
+<body>
+<header>
+    <%= require('html-loader!../template/header.html').default %>
+</header>
+    <div class="second_layout">
+        <div class="top_page">
+            <form class="myForm">
+                <p>ショッピングカート</p>
+                <table class="tb_shopcart">
+                    <thead>
+                        <tr>
+                            <th>商品</th>
+                            <th></th>
+                            <th>数量</th>
+                            <th>小計</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+
+                <div class="bill-item">
+                    <button id="btn_Clearall" type="button">
+                        <i class="far fa-trash-alt"></i><span>delete all</span>
+                    </button>          
+                    <div>
+                        <span id = "label">合 計</span>
+                        <span id = "car_total"></span> 
+                    </div>    
+                </div>
+                <button id="btn_checkout" class='btn_type' type="button">レジへ進む</button>
+                        <button id="btn_logout">LOGOUT</button>
+            </form>
+        </div>
+        <footer class='flex-layout'>
+            <%= require('html-loader!../template/footer.html').default %>
+            
+        </footer>
+    </div>
+    
+ 
+
+</body>
+
+</html>

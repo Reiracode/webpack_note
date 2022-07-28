@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta content='developer' name='reiracode' />
+  <meta name="description" content="F2E Desinger in Taiwan">
+  <title>Rehome</title>
+</head>
+
+<body>
+  <header><%= require('html-loader!../template/header.html').default %></header>
+  <div class="second_layout">
+    <div class="login_style">
+      <div class="tabs-container">
+        <div class="tabs-pages">
+          <div class="tab-label active">login</div>
+          <div class="tab-label">sign in</div>
+        </div>
+
+        <div class="tabs-contents">
+          <div class="tab-inner active">
+            <div class="inner-content">
+              <form id="form_login">
+                <label class="userdata">
+                  <i class="fas fa-user fa-lg"></i>
+                  <input type="text" placeholder="Username" name="userno" class="userno" id="userno" required />
+                </label>
+                <label class="userdata">
+                  <i class="fas fa-unlock-alt toogle_pwd"></i>
+                  <input type="password" placeholder="Password" name="password" class="password" id="password"
+                    required />
+                </label>
+
+                <button id="login_btn" class="btn_type">login</button>
+              </form>
+            </div>
+          </div>
+
+          <div class="tab-inner">
+            <div class="inner-content">
+              <form id="form_register">
+                <label class="userdata">
+                  <i class="fas fa-user fa-lg"></i>
+                  <input type="text" placeholder="Userno" name="userno" class="userno" id="userno" required />
+                </label>
+
+                <label class="userdata">
+                  <i class="fas fa-users fa-lg"></i>
+                  <input type="text" placeholder="Username" name="username" class="username" id="username" required />
+                </label>
+
+                <label class="userdata">
+                  <i class="fas fa-unlock-alt fa-lg toogle_pwd"></i>
+                  <input type="password" placeholder="Password" name="password" required />
+                </label>
+
+                <label class="userdata">
+                  <i class="fas fa-envelope fa-lg"></i>
+                  <input type="email" placeholder="Email" name="email" class="email" id="email" required />
+                </label>
+
+
+                <label class="userdata">
+                  <i class="fas fa-envelope fa-lg"></i>
+                  <input type="depno" placeholder="depno" name="depno" class="depno" id="depno" required />
+                </label>
+
+
+                <button id="regis_btn" class="btn_type">register</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class='flex-layout'>
+        <%= require('html-loader!../template/footer.html').default %>
+    </footer>
+  </div>
+ 
+ 
+</body>
+
+</html>

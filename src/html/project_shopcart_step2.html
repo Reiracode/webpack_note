@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta content='developer' name='reiracode' />
+  <link rel="icon" href="./images/logo.png" type="image/png" />
+  <meta name="description" content="F2E Desinger in Taiwan">
+  <title>Rehome</title>
+</head>
+
+<body>
+  <header>
+    <%= require('html-loader!../template/header.html').default %>
+  </header>
+  <div class="second_layout" class="shop_process">
+
+    <div class="top_page">
+      <ul class="process3">
+        <!-- <span></span> -->
+        <li><a href="./project_shopcart_step1.html">1</a></li>
+        <li><a href="./project_shopcart_step2.html">2</a></li>
+        <li><a href="./project_shopcart_step3.html">3</a></li>
+      </ul>
+
+      <table class="flex-table" id="customers">
+        <thead>
+          <tr>
+            <th>訂購人姓名</th>
+          </tr>
+          <tr>
+            <th>地址</th>
+          </tr>
+          <tr>
+            <th>state</th>
+          </tr>
+          <tr>
+            <th>電話</th>
+          </tr>
+          <tr>
+            <th>電話1</th>
+          </tr>
+          <tr>
+            <th>email</th>
+          </tr>
+          <tr>
+            <th>PS</th>
+          </tr>
+        </thead>
+
+        <tbody></tbody>
+      </table>
+      <!-- <form id="myForm" method="post"> -->
+      <form id="myForm">
+        <table class="tb_shopcart">
+          <caption class="order_detail">付款方式</caption>
+          <thead>
+            <tr>
+              <th>商品</th>
+              <th>価格</th>
+              <th>数量</th>
+              <th>小計</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+          <!-- <button id="btnShow" type='submit'>Try</button> -->
+        </table>
+        <button id="btn_Show" class='btn_type' type="button">送出訂單</button>
+        <!-- <div class="submit-button"><input type="submit" id="submit" value="Submit" /></div> -->
+      </form>
+
+
+    </div>
+    <footer class='flex-layout'>
+        <%= require('html-loader!../template/footer.html').default %>
+    </footer>
+  </div>
+ 
+
+</body>
+
+</html>

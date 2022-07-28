@@ -1,0 +1,31 @@
+
+.modal_close {
+  background: transparent;
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  width: 60px;
+  height: 60px;	
+  cursor: pointer;
+	z-index: 9;
+	span {
+		background-color: #fff;
+		position: absolute;
+		right: 0;
+		height: 1px;
+		width: 100%;
+		transition: all 0.5s;
+	}
+  span:nth-child(1) {
+		top: 6px; 
+		transform: translateY(23px) rotate(-45deg);
+	}
+  span:nth-child(2) {
+		bottom: 6px;
+		transform: translateY(-23px) rotate(45deg);
+	}
+	&:hover {
+		transition: transform 0.3s;
+		transform: rotate(180deg);
+	}
+}

@@ -1,0 +1,46 @@
+{
+  "homepage": "http://Reiracode.github.io/webpack-test",
+  "name": "rehome",
+  "version": "1.0.0",
+  "description": "Webpack 5 ",
+  "author": "reiralin",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --open --mode development",
+    "build": "webpack --mode production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist -b master"
+  },
+  "proxy": "http://localhost:8081/",
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.8",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.4",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^6.7.1",
+    "expose-loader": "^3.1.0",
+    "gh-pages": "^3.2.3",
+    "html-loader": "^3.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "path": "^0.12.7",
+    "sass": "^1.50.0",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.71.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4",
+    "webpack-watched-glob-entries-plugin": "^2.2.4"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "gsap": "^3.10.2",
+    "jquery": "^3.6.0",
+    "locomotive-scroll": "^4.1.4",
+    "regenerator-runtime": "^0.13.9",
+    "splitting": "^1.0.6",
+    "swiper": "^8.0.7"
+  }
+}

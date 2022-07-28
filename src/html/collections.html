@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content='developer' name='reiracode' />
+    <meta name="description" content="F2E Desinger in Taiwan">
+    <title>Rehome</title>
+</head>
+
+<body>
+    <div class="second_layout">
+        <header>
+            <%= require('html-loader!../template/header.html').default %>
+        </header>
+        <div class="top_page">
+            <div class="select-tool">
+                <nav class="items">
+                    <ul>
+                        <li><a href="./index.html">top</a>
+                            <ul>
+                                <li><a href="./collections.html">商品目錄</a>
+                                    <ul>
+                                        <li><a href="./products.html">商品細節</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="breadcrumb"></div>
+                <div class="select-div">
+                </div>
+            </div>
+            <div id="product-all"></div>
+        </div>
+
+        <div class="pagination-holder clearfix">
+            <div id="light-pagination" class="paginationss"></div>
+        </div>
+
+        <footer class='flex-layout'>
+            <%= require('html-loader!../template/footer.html').default %>
+        </footer>
+    </div>
+</body>
+
+</html>

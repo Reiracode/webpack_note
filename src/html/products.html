@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content='developer' name='reiracode' />
+    <meta name="description" content="F2E Desinger in Taiwan">
+    <title>Rehome</title>
+</head>
+<body>
+<!-- <header class="ds-f"></header> -->
+    <div class="second_layout bg-c">
+<header>
+    <%= require('html-loader!../template/header.html').default %>
+</header>
+        <nav class="items">
+            <ul>
+                <li><a href="./index.html">top</a>
+                    <ul>
+                        <li><a href="./collections.html">商品目錄</a>
+                            <ul>
+                                <li><a href="./products.html">商品細節</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="prod_detail">
+            <div class="div_left">
+                <!-- mobile Slider main container -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper" id="swiper-wrapper">
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <!-- pc -->
+                <div class="prod_detail_pc">
+                    <figure class="list_img1">
+                         <!-- <img src='assets/images/000000000370_1.jpg' alt="">
+                        <img src='assets/images/000000000370_1.jpg' alt="" class="active"> -->
+                    </figure>
+                    
+                    <div class="mini_pic"></div>
+                </div>
+            </div>
+
+            <div class="div_right">
+                <ul class="breadcrumb"></ul>
+                <h2 class="product_title"></h2>
+<!-- <div class="buttonsss">wefwefwefww</div> -->
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form-row">
+                            <div class="price_style">
+                                <p class="card-text"></p>
+                            </div>
+
+                            <div class="price_style">
+                                <p class="card_price">数量</p>
+                                <div class='price_col'>
+                                    <button class='add_minus_btn shop_cart_btn minus_cal'><span>-</span></button>
+                                    <input type='num' class='carlist_amount amount' min='1' value=1 disabled='disabled'>
+                                    <button class='add_minus_btn shop_cart_btn   add_cal'><span>+</span></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn_type btn-100 add_car">
+                            <i class="fas fa-shopping-cart"></i> 
+                            商品をかごに追加
+                        </button>
+                    </div>
+                </div>
+
+                <div id="tabs">
+                    <div id="menu">
+                        <p data-active="prod_data_size" class="product_detail_title active">
+                            商品尺寸
+                        </p>
+                        <p data-active="prod_data_detail" class="product_detail_title">
+                            商品細節
+                        </p>
+                    </div>
+                    <div id="contents">
+                        <div id="prod_data_size" class="product_detail active"></div>
+                        <div id="prod_data_detail" class="product_detail"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class='flex-layout'><%= require('html-loader!../template/footer.html').default %></footer>
+ 
+    </div>
+    <!-- <script src="./js/jquery.min.js"></script>
+    <script src="./js/format.js"></script> -->
+    <!-- <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> -->
+   
+</body>
+
+</html>

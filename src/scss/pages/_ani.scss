@@ -1,0 +1,161 @@
+/* Part1 section 1- bgimgx */
+.wrapper {
+  height: 100vh;
+  min-height: -webkit-fill-available;
+  height: calc(var(--vh, 1vh) * 100);
+  width: 100%;
+  box-shadow: 0px 6px 24px rgba(166, 161, 161, 0.6);
+  overflow: hidden;
+  position: relative;
+	background-color: #dfcece;
+	background: radial-gradient(circle, rgba(229,197,197,1) 0%, rgba(240,213,248,1) 100%);
+
+	.logo_bg {
+		width: 100%;
+		height: 100%;
+		height: calc(var(--vh, 1vh) * 100);
+		position: absolute;
+		z-index: -1;
+    clip-path: circle(10% at 50% 50%);
+		@include mobile{
+				clip-path: polygon(30% 30%, 60% 30%, 60% 60%, 30% 60%);
+		}
+		&>img{
+			height: 100%;
+			width:100%;
+			filter: contrast(0.8) opacity(0.9);
+			transform: scale(2);
+			@include mobile{
+          width:unset;
+			}
+		}
+	}
+}
+
+// <!-- hand writing clip path-->
+.sign_block{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position:absolute; 
+	width:100%;
+	height: 100%; 
+		/* svg signature*/
+		.sign_svg {
+			margin: auto;
+			height: 100%;
+			width: 500px;
+			padding-top: 80px;      
+			filter: drop-shadow(6px 0px #fff);
+			@include phone{
+						position: unset;
+						width:80vw;	
+			}
+	}
+	/* letters paths clip animation */
+	// #squiggle {
+		.rehome {
+			stroke-dasharray: 1280;
+			stroke-dashoffset: 1280;
+			fill:none;
+			stroke:#f3acac;
+			stroke-miterlimit:10;
+			stroke-width:12pt;
+	}
+}
+
+// 	<!-- bg path animation -->
+.svg_bg{
+	height: calc(var(--vh, 1vh) * 100);
+	width:100%;
+	@include mobile{
+			width:unset;
+	}
+	path{
+		stroke-dasharray: 13000;
+		stroke-dashoffset:13000;
+		fill: none;
+		stroke-width: 5pt;
+		// stroke:#ffe6e6;
+		stroke:#fff;
+	}
+}
+
+#replay {
+	position: absolute;
+	bottom: 7%;
+	left: 14%;
+	transform: translate(0px,-20px);
+	z-index: 1;
+	font-size: 50px;
+	color:#fff;
+	cursor: pointer;
+	&:hover {
+		color: #f2c9c9;
+	}
+}
+
+.main_ds{
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	div{
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		position: absolute;
+		width: 60vw;
+		height: 60vw;
+		@include phone{
+			width: 100vw;
+			height: 100vw;
+		}
+		&:nth-child(2){
+			background: linear-gradient(63deg,#f8a0a04f, #c9ace385);
+			clip-path: circle(0% at 50% 50%);
+			@include phone{
+					clip-path:polygon(50% 0%, 50% 0%, 0% 50%, 0% 50%);
+			}
+		}
+	}
+	h2{
+		font-size: 10em;
+		color:#fff0;
+		font-family: "Bodoni Moda";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		// transform: tran	slate(calc(50%), -50%);
+		transform: translate(calc(-50%), -50%);
+		// width: 65vw;
+		line-height: 140px;
+		@include pad{
+			font-size: 8em;
+		}
+		@include phone{
+			font-size: 5.6em;
+				line-height: 100px;
+			  width: 80vw;
+				// transform: translate(calc(-50%), -50%);
+				transform: translate(calc(-50% - 40px), -50%);
+			// word-break: break-all;
+			// transform: translate(calc(50% - 40vw), -50%);
+		}
+		span{
+			font-family: "Bodoni Moda";
+			margin-left: 100px;
+				@include phone{
+						margin-left: 0;
+				}
+		}
+	}
+
+	.slogan2 h2{
+		-webkit-text-stroke:2px  #fff;
+		color:transparent;
+	}
+
+} 

@@ -1,0 +1,178 @@
+@mixin bg-opacity($color, $opacity) {
+  background: rgba($color, $opacity);
+    // @include bg-opacity($rsary-color, 0.58);
+}
+
+@mixin hide-text{
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+};
+
+
+@mixin flex-2-col($gap, $percent) {
+    >.col-m-#{$percent} {
+        margin: 0 #{$gap}px;
+        flex: 0 0 calc(#{$percent} - #{$gap*2}px);
+        max-width:  $percent;
+    }
+    >.col-m-#{$percent} {
+        margin: 0 #{$gap}px;
+        flex: 0 0 calc(#{$percent} - #{$gap*2}px);
+        max-width:  $percent;
+    }
+}
+
+
+@mixin column-basis-style($gap, $percent) {
+    margin: 0 #{$gap}px;
+    flex: 0 0 calc(#{$percent} - #{$gap*2}px);
+}
+
+
+@mixin set-card($gap, $percent) {
+    // @for $i from 1 through $total {
+    //     &:nth-child(#{$i}) {
+    //         // flex:1 0 300px;
+    //         flex: 1 0 calc(100%/#{$percent});
+    //     }
+    // }
+		display: flex;		
+		margin: 0 #{$gap}px;
+		// // >div {
+		// 		// flex: 0 1 calc(100% /#{$percent});
+		// 		// margin:0 #{$gap}px;
+		// // }
+		// @include	phone {
+		// 	flex-direction: column;
+		// }
+
+}
+
+
+//RWD
+@mixin desk {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin pad {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin cusphone {
+  @media (max-width: 850px) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+//flex box
+@mixin card-list-bs($gap, $percent) {
+  > .card-list {
+    margin: 0 #{$gap}px;
+    flex: 0 0 calc(#{$percent} - #{$gap * 2}px);
+  }
+}
+
+@mixin column-basis-style($gap, $percent) {
+  margin: 0 #{$gap}px;
+  flex: 0 0 calc(#{$percent} - #{$gap * 2}px);
+}
+
+
+@mixin flex-cols($from: 1, $to: 2) {
+  @for $i from $from to $to {
+    .text-#{$i} {
+      font-size: 10px * $i;
+    }
+  }
+
+
+}
+//explore button
+//button
+@mixin button-basis-style($border, $color) {
+  border: #{$border}px solid $color;
+  color: $color;
+  border-radius: 20rem;
+  transition: all 0.3s;
+  @include bg-opacity($rsary-color, 0.58);
+  :hover {
+    background-color: $color;
+    color: $primary-color;
+  }
+}
+@mixin button-basis1($color) {
+  font-size: 1rem;
+  text-align: center;
+  background: $color;
+  color: $space-color;
+  border-radius: 20px 4px;
+  margin: 3rem auto;
+  padding: 1rem;
+  width: 50%;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  // box-shadow: 0 15px 20px -10px rgb(0, 0 ,0 / 30%);
+  box-shadow: 0 15px 20px -10px #888888;
+  // #868181
+  transition: color 0.6s, box-shadow 0.3s, transform 0.3s;
+
+  &:hover {
+    box-shadow: 0 3px 5px -5px rgba(134, 129, 129, 0.30);
+    transform: translateY(-1px);
+    color: $space-color;
+  }
+}
+
+
+@mixin fontSize($from: 1, $to: 6) {
+  @for $i from $from to $to {
+    .text-#{$i} {
+      font-size: 10px * $i;
+    }
+  }
+}
+
+
+// $width
+// @mixin width($grid-breakpoints: null) {
+
+//     @each $key,
+//     $value in $sizes {
+//         .w#{$grid-breakpoints}-#{$key} {
+//             width: $value !important;
+//         }
+//     }
+// }
+// @include media-breakpoint-up(lg) {
+//     @include width(-lg);
+// }
+
+//layout 4 2 1
+@mixin flex-list($percent,$gap) {
+    // margin: 0 #{$gap}px;
+    // max-width:  $percent;
+    flex: 0 1 calc(#{$percent} - #{$gap*2}px);
+    @include pad{
+      flex: 0 1 calc(50% - 12px);
+    }
+    @include mobile{
+      flex:100%
+    }
+}

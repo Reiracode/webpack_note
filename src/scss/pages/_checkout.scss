@@ -1,0 +1,118 @@
+// page
+.myForm {
+    width: 100%;
+    margin-bottom: 20px;
+    >p {
+      text-align: center;
+      padding: 20px;
+      background-color: #f3f6f9;
+      letter-spacing: 1rem;
+      font-size: 1.2rem;
+      border-bottom: 1px solid #dedada;
+    }
+}
+
+// table
+.tb_shopcart {
+    width: 100%;
+    border-collapse: collapse;
+    @include pad{
+      thead{
+        display: none;
+      }
+    }
+    thead th {
+      padding: 10px 0;
+      border-bottom: 1px solid #d4cbca;
+    }
+
+    tbody tr {
+        border-bottom: 1px solid #dedbdb;
+        padding: 20px 0;
+        #fname0 {
+            height: auto;
+            width: 80px;
+            padding: 20px 0;
+        }
+        #fname0 img {
+            width: 80px;
+            height: 80px;
+        }
+        #fname0 a {
+            display: flex;
+        }
+        #fname1 {
+            flex: 1;
+        }
+        #fname2 {
+            min-width: 50px;
+        }
+        #fname3{
+          padding: 10px 0;
+          margin-right: 10px;
+          min-width: 100px;
+          font-size: 1.2rem;
+          @include phone{
+            text-align: right;
+            width: 130px;
+          }
+        }
+        #fname4{
+          @include phone{
+            position: absolute;
+            top: 10px;
+            right: 2px;
+          }
+        }
+    }
+
+    tbody td {
+        color: #555;
+        text-align: center;
+        p {
+          text-align: left;
+          font-weight: 900;
+          margin-left: 10px;
+          font-size: 1.2rem;
+          line-height: 2rem;
+           color: #555;
+          @include pad{
+           
+            text-align: left;
+            white-space: break-spaces;
+          }
+        }
+        p:nth-child(2) {
+            font-size: 0.8rem;
+        }
+    }
+}
+
+@media screen and (max-width: 992px){
+  .tb_shopcart:not(.myTable) tbody tr {
+      display: flex;
+      position: relative;
+      align-items: center;
+      flex-flow: row wrap;
+  }
+}
+
+.bill-item {
+    padding: 10px;
+    text-align: right;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    background: #eae5e573;
+}
+// .order_detail {
+//     padding: 10px;
+//     background-color: #f3f6f9;
+//     letter-spacing: 1rem;
+//     margin: 15px 0;
+//     text-align: center;
+// }
+
+.div_shopcar_detail{
+    margin: 20px 0 50px 0;
+}

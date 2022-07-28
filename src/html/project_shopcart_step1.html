@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta content='developer' name='reiracode' />
+  <meta name="description" content="F2E Desinger in Taiwan">
+  <title>Rehome</title>
+</head>
+
+<body>
+  <header><%= require('html-loader!../template/header.html').default %></header>
+  <div class="second_layout">
+    <div class="top_page">
+      <ul class="process3">
+        <li><a href="./project_shopcart_step1.html">1</a></li>
+        <li><a href="./project_shopcart_step2.html">2</a></li>
+        <li><a href="./project_shopcart_step3.html">3</a></li>
+      </ul>
+
+      <div class="col2_item">
+        <form id="form_checkout1" action="#">
+          <label class="userdata">
+            <i class="step1_member far fa-user"></i>
+            <input type="text" placeholder="名前" name="recip_name" id="recip_name" required>
+          </label>
+
+          <label class="userdata">
+            <i class="step1_member far fa-address-card"></i>
+            <input type="text" placeholder="住所" name="recip_street" id="recip_street" required>
+          </label>
+
+          <!-- <div class="form_group" > -->
+          <label class="userdata recip_city">
+            <i class="step1_member  far fa-address-book"></i>
+            <div class="list_selector">
+              <select class="recip_city select-selected"></select>
+              <select class="recip_state select-selected"></select>
+            </div>
+          </label>
+          <!-- <label class="userdata recip_city">
+                            <i class="step1_member  far fa-address-book"></i>
+                            <input type="text" placeholder="city" name="recip_city" id="recip_city" required>
+                        </label>
+                        <label class="userdata recip_city">
+                            <i class="step1_member  far fa-address-book"></i>
+                            <input type="mobile" placeholder="state" name="recip_state" id="recip_state" required>
+                        </label> -->
+          <!-- </div> -->
+
+
+          <label class="userdata">
+            <i class="step1_member fas fa-mobile-alt"></i>
+            <input type="mobile" placeholder="電話番号" name="recip_mobile" id="recip_mobile" required>
+          </label>
+
+          <label class="userdata">
+            <i class="step1_member far fa-envelope"></i>
+            <input type="mail" placeholder="mail" name="recip_mail" id="recip_mail" required>
+          </label>
+
+          <label class="userdata">
+            <i class="step1_member far fa-edit"></i>
+            <input type="text" placeholder="備註" name="recip_ps" id="recip_ps">
+          </label>
+
+          <button id="btn_Show">送出訂單</button>
+
+        </form>
+      </div>
+
+      <div class="div_shopcar_detail">
+        <table class="tb_shopcart">
+          <caption class="order_detail">購買明細</caption>
+          <thead>
+            <tr>
+              <th>商品</th>
+              <th></th>
+              <th>数量</th>
+              <th>小計</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+
+        <div class="bill-item">
+          <span id="label">合計</span>
+          <span id="car_total"><strong></strong></span>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- <footer class='flex-layout'></footer> -->
+        <footer class='flex-layout'>
+          <%= require('html-loader!../template/footer.html').default %>
+        </footer>
+  </div>
+ 
+  <!-- <script src="https://code.essoduke.org/js/twzipcode/twzipcode.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/tw-city-selector@2.1.0/dist/tw-city-selector.min.js"></script>
+
+
+
+</body>
+
+</html>

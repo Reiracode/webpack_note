@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta content='developer' name='reiracode' />
+  <meta name="description" content="F2E Desinger in Taiwan">
+  <title>Rehome</title>
+</head>
+
+<body>
+  <header>
+    <%= require('html-loader!../template/header.html').default %>
+  </header>
+
+  <div class="second_layout">
+    <div class="mainbody">
+      <div class="member_link">
+        <h3>會員中心</h3>
+      </div>
+
+      <div class="main2">
+        <table class="table_member" id="myTable">
+          <thead>
+            <tr>
+              <th>訂單號碼</th>
+              <th>品名</th>
+              <th>價格</th>
+              <th>數量</th>
+              <th>訂購時間</th>
+              <th>地址</th>
+              <th>訂購人</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+
+    </div>
+    <footer class='flex-layout'>
+      <%= require('html-loader!../template/footer.html').default %>
+    </footer>
+  </div>
+</body>
+
+</html>

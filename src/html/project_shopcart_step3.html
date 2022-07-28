@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<!-- 
+    onclick 事件https://www.fooish.com/jquery/events.html
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta content='developer' name='reiracode' />
+  <meta name="description" content="F2E Desinger in Taiwan">
+  <title>Rehome</title>
+</head>
+
+<body>
+  <header>
+    <%= require('html-loader!../template/header.html').default %>
+  </header>
+  <div class="second_layout">
+
+    <div class="top_page">
+      <ul class="process3">
+        <li><a href="./project_shopcart_step1.html">1</a></li>
+        <li><a href="./project_shopcart_step2.html">2</a></li>
+        <li><a href="./project_shopcart_step3.html">3</a></li>
+      </ul>
+
+      <div class="order_detail">訂單資料</div>
+
+      <table class="flex-table" id="customers">
+        <thead>
+          <tr>
+            <th>訂單編號</th>
+          </tr>
+          <tr>
+            <th>訂購人編號</th>
+          </tr>
+          <tr>
+            <th>訂購人姓名</th>
+          </tr>
+          <tr>
+            <th>地址</th>
+          </tr>
+          <tr>
+            <th>電話</th>
+          </tr>
+          <tr>
+            <th>email</th>
+          </tr>
+          <tr>
+            <th>備註</th>
+          </tr>
+          <tr>
+            <th>訂購時間</th>
+          </tr>
+          <tr>
+            <th>state</th>
+          </tr>
+          <tr>
+            <th>stree</th>
+          </tr>
+        </thead>
+
+        <tbody></tbody>
+      </table>
+
+      <form id="myForm">
+        <table class="tb_shopcart">
+          <caption class="order_detail">訂購明細</caption>
+          <thead>
+            <tr>
+              <th>商品</th>
+              <th></th>
+              <th>数量</th>
+              <th>小計</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </form>
+    </div>
+
+    <footer class='flex-layout'>
+      <%= require('html-loader!../template/footer.html').default %>
+    </footer>
+  
+  </div>
+</body>
+
+</html>
