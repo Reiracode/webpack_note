@@ -42,6 +42,7 @@ $(function () {
     function query_data() {
         // filter 全文檢索 by myUrl.id
         let results = [];
+        console.log(alldata)
         for (let i = 0; i < alldata.length; i++) {
             for (let key in alldata[i]) {
                 if (alldata[i][key].indexOf(myUrl.id) != -1) {
@@ -56,10 +57,12 @@ $(function () {
 
     // 産生tag:不同分類 item.id
     function display_tag(objs) {
+
+        console.log(objs)
         $(".select-div").empty();
         // 取得class
         const taglist = Object.values(objs).map(items => items.class);
-        // console.log(taglist)
+        console.log(taglist)
         //去除重複
         let index = Array.from(new Set(taglist));
         // console.log(index)

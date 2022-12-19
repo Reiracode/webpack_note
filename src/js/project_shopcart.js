@@ -9,6 +9,14 @@ $(function () {
         // console.log(response.data)
         window.location.href = "project_cloversky_member.html";
       })
+    
+    
+    
+    
+    
+    
+    
+    
   });
 
   //safari 100vh bug

@@ -41,6 +41,7 @@ module.exports = {
     project_shopcart_step2: "./src/js/project_shopcart_step2.js",
     project_shopcart_step3: "./src/js/project_shopcart_step3.js",
     login: "./src/js/login.js",
+    member: "./src/js/member.js",
   },
   // entry: ["regenerator-runtime/runtime.js", "./src/main.js"],
 

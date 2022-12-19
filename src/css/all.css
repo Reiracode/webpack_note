@@ -635,7 +635,7 @@ header {
   background-image: linear-gradient(to bottom, #cbbcbc 50%, transparent 50%);
   background-size: 100% 200%;
   background-repeat: no-repeat;
-  background-position: 50% calc(100px - (var(--progress) * 100px));
+  background-position: 100% calc(160px - var(--progress) * 160px);
   -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: -webkit-transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -718,6 +718,12 @@ header {
 
 .pin-wrap .flex_alink3:first-child p {
   color: darkgray;
+}
+
+@media (max-width: 850px) {
+  .pin-wrap .flex_alink3 {
+    width: 70vw;
+  }
 }
 
 @media (max-width: 767px) {
@@ -820,18 +826,19 @@ header {
 }
 
 .pin-wrap .flex_alink3 .flex_list_descript > h2 {
-  color: white;
+  color: transparent;
   font-family: Bodoni Moda;
   font-weight: 400;
   font-size: 80px;
   -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke: 1.5px #fff;
   opacity: 0;
   -webkit-transform: translateY(100px);
           transform: translateY(100px);
-  -webkit-transition: opacity 0.3s cubic-bezier(0, 0.55, 0.45, 1) 0.1s, -webkit-transform 0.5s cubic-bezier(0, 0.55, 0.45, 1) 0.1s;
-  transition: opacity 0.3s cubic-bezier(0, 0.55, 0.45, 1) 0.1s, -webkit-transform 0.5s cubic-bezier(0, 0.55, 0.45, 1) 0.1s;
-  transition: transform 0.5s cubic-bezier(0, 0.55, 0.45, 1) 0.1s, opacity 0.3s cubic-bezier(0, 0.55, 0.45, 1) 0.1s;
-  transition: transform 0.5s cubic-bezier(0, 0.55, 0.45, 1) 0.1s, opacity 0.3s cubic-bezier(0, 0.55, 0.45, 1) 0.1s, -webkit-transform 0.5s cubic-bezier(0, 0.55, 0.45, 1) 0.1s;
+  -webkit-transition: opacity 0.3s cubic-bezier(0, 0.55, 0.45, 1) 0.1s, -webkit-transform 0.9s cubic-bezier(0, 0.55, 0.45, 1) 0.1s;
+  transition: opacity 0.3s cubic-bezier(0, 0.55, 0.45, 1) 0.1s, -webkit-transform 0.9s cubic-bezier(0, 0.55, 0.45, 1) 0.1s;
+  transition: transform 0.9s cubic-bezier(0, 0.55, 0.45, 1) 0.1s, opacity 0.3s cubic-bezier(0, 0.55, 0.45, 1) 0.1s;
+  transition: transform 0.9s cubic-bezier(0, 0.55, 0.45, 1) 0.1s, opacity 0.3s cubic-bezier(0, 0.55, 0.45, 1) 0.1s, -webkit-transform 0.9s cubic-bezier(0, 0.55, 0.45, 1) 0.1s;
 }
 
 @media (max-width: 767px) {
@@ -853,6 +860,12 @@ header {
   opacity: 1;
   -webkit-transform: translateY(-30px);
           transform: translateY(-30px);
+}
+
+@media (max-width: 850px) {
+  .pin-wrap .flex_alink3 .flex_list_descript {
+    width: 70vw;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1616,22 +1629,6 @@ footer .menu-link a:hover {
   stroke: #fff;
 }
 
-#replay {
-  position: absolute;
-  bottom: 7%;
-  left: 14%;
-  -webkit-transform: translate(0px, -20px);
-          transform: translate(0px, -20px);
-  z-index: 1;
-  font-size: 50px;
-  color: #fff;
-  cursor: pointer;
-}
-
-#replay:hover {
-  color: #f2c9c9;
-}
-
 .main_ds {
   top: 50%;
   left: 50%;
@@ -1692,9 +1689,7 @@ footer .menu-link a:hover {
 
 @media (max-width: 767px) {
   .main_ds h2 {
-    font-size: 5.6em;
-    line-height: 100px;
-    width: 80vw;
+    font-size: 7em;
     -webkit-transform: translate(calc(-50% - 40px), -50%);
             transform: translate(calc(-50% - 40px), -50%);
   }
@@ -1703,12 +1698,6 @@ footer .menu-link a:hover {
 .main_ds h2 span {
   font-family: "Bodoni Moda";
   margin-left: 100px;
-}
-
-@media (max-width: 767px) {
-  .main_ds h2 span {
-    margin-left: 0;
-  }
 }
 
 .main_ds .slogan2 h2 {
@@ -1752,6 +1741,11 @@ footer .menu-link a:hover {
       -ms-flex-align: center;
           align-items: center;
   margin: 20px;
+}
+
+.col-2-img:nth-child(2) img {
+  -webkit-filter: opacity(0.8);
+          filter: opacity(0.8);
 }
 
 .col-2-img img {
@@ -1826,6 +1820,7 @@ footer .menu-link a:hover {
   width: 100%;
   min-height: 600px;
   margin: 60px auto 0;
+  background: center/cover no-repeat url(../images/cloversky/top2.jpg);
 }
 
 @media (max-width: 480px) {
