@@ -43,6 +43,10 @@
 
 3. To build the production bundle:
 
+## DEMO
+
+[DEMO](https://reiracode.github.io/webpack_rehome)
+
 
 ## License
 
