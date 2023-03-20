@@ -18,6 +18,7 @@ webpack_rehome/
 ├── package.json
 ├── webpack.config.js
 
+
 This is a project that demonstrates how to use Webpack to bundle and optimize a web application. The application is a simple home rental website that displays a list of homes for rent and allows users to filter homes based on their preferences.
 
 ## Project Structure
