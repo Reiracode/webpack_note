@@ -29,19 +29,6 @@
 - `html-webpack-plugin` - A plugin that generates an HTML file with the bundle automatically injected.
 - `clean-webpack-plugin` - A plugin that cleans the output directory before each build.
 
-## Installation
-
-1. Clone the repository:git clone https://github.com/Reiracode/webpack_rehome.git
-
-2. Install the dependencies: npm install
-
-## Usage
-
-1. Run the development server: npm start
-
-2. Open `http://localhost:8080` in your browser.
-
-3. To build the production bundle:
 
 ## DEMO
 
