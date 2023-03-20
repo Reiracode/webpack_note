@@ -1,7 +1,7 @@
 # webpack_rehome
 
-webpack_rehome/
 
+# Project Structure
 .
 ├── dist/
 │ ├── bundle.js
