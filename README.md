@@ -1,28 +1,10 @@
 # webpack_rehome
-webpack_rehome/
-├── dist/
-│   ├── bundle.js
-│   └── index.html
-├── src/
-│   ├── assets/
-│   │   ├── images/
-│   │   │   ├── house-1.jpg
-│   │   │   └── house-2.jpg
-│   │   └── styles/
-│   │       └── style.css
-│   ├── components/
-│   │   ├── Home.js
-│   │   └── HomeList.js
-│   └── index.js
-├── package.json
-└── webpack.config.js
+ 
+這是我的第一個作品：傢具電商網站，以優雅的紫色、褐色系，營造柔和的氛圍，並透過動畫設計，呈現現代風格和精緻的設計，加深UI/UX體驗。
+ 
+- Handwriting 效果：透過 CSS 的動畫屬性和 SVG 路徑繪製實現優雅的動畫，在主標題中，字母會先以線條的形式出現，逐漸實現成文字，最後手寫的感覺。也可以讓使用者對品牌更有印象。
 
-
-
-This is a project that demonstrates how to use Webpack to bundle and optimize a web application. The application is a simple home rental website that displays a list of homes for rent and allows users to filter homes based on their preferences.
-
-## Project Structure
-
+- Hover 效果：在首頁的產品展示區域，使用locomotive-scroll，橫向捲動，圖片漸變效果。這種效果可以讓使用者更容易注意到產品，並且增加互動性。
 
 ## Technologies Used
 
@@ -30,9 +12,14 @@ This is a project that demonstrates how to use Webpack to bundle and optimize a 
 - CSS
 - JavaScript
 - Webpack
-- Babel
+- jquery
+- axios
+- gsap
+- locomotive-scroll
+- splitting
+- swiper
 
-## Plugins and Libraries
+## Webpack Plugins and Libraries
 
 - `webpack` - A module bundler that is used to bundle all the necessary files for the application.
 - `webpack-dev-server` - A development server that provides live reloading and other features.
