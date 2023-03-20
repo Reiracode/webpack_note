@@ -2,10 +2,9 @@
 
 webpack_rehome/
 
+.
 ├── dist/
-
 │ ├── bundle.js
-
 │ ├── index.html
 ├── src/
 │ ├── assets/
