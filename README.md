@@ -6,6 +6,15 @@
 
 - Hover 效果：在首頁的產品展示區域，使用locomotive-scroll，橫向捲動，圖片漸變效果。這種效果可以讓使用者更容易注意到產品，並且增加互動性。
 
+## 功能
+- 首頁輪播圖片展示
+- 商品列表展示
+- 商品詳細頁面展示
+- 購物車功能
+- 結帳功能
+- 會員登入/註冊功能
+- 訂單查詢功能
+
 ## Technologies Used
 
 - HTML
@@ -38,5 +47,12 @@
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
+ 
+
+
+  
+
 
 
